@@ -15,12 +15,12 @@ var movieServices = angular.module('moviesApp.services',[]);
 //var directives = angular.module('moviesApp.directives',[]);
 
 moviesApp.config(['$routeProvider', function($routeProvider) {
-	$routeProvider.when('/',
+	$routeProvider.when('/search',
 	{
 		templateUrl: 'partials/search.html',
-		controller: 'ActorController'
+		controller: 'MovieAppListController'
 	});
-	$routeProvider.when('/movies', 
+	/*$routeProvider.when('/movies', 
 	{
 		templateUrl: 'partials/MoviesList.html',
 		controller: 'MovieListController'
@@ -34,6 +34,6 @@ moviesApp.config(['$routeProvider', function($routeProvider) {
 	{
 		templateUrl: 'partials/actorProfile.html',
 		controller: 'ActorController'
-	});
-	$routeProvider.otherwise({redirectTo: '/'});	
+	});*/
+	$routeProvider.otherwise({redirectTo: '/search'});	
 }]);
