@@ -1,19 +1,12 @@
 'use strict';
-
 var moviesApp = angular.module('moviesApp',[
 	'ngRoute',
 	'ngResource',
 	'moviesApp.services',
 	'moviesApp.controllers'
-//	'moviesApp.directives'
 ]);
-
 var movieControllers = angular.module('moviesApp.controllers',[]);
-
 var movieServices = angular.module('moviesApp.services',[]);
-
-//var directives = angular.module('moviesApp.directives',[]);
-
 moviesApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/search',
 	{
@@ -25,6 +18,5 @@ moviesApp.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'partials/actorProfile.html',
 		controller: 'ActorController'
 	});
-	
 	$routeProvider.otherwise({redirectTo: '/search'});	
 }]);

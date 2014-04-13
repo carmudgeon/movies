@@ -5,15 +5,11 @@ Contact
 	Diego H. Agudelo M.
 	diego.agudeo2@gmail.com
 
-
-
 Libraries/API's used:
 
 	- CSS: Bootstrap 3.0
 	- Javascript: AngularJS, jquery-2.1.0.js
-	- Optional: Underscore.js
 	- The movie db Org: http://www.themoviedb.org/
-
 
 Legal
 

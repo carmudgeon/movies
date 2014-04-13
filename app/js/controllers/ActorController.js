@@ -1,5 +1,4 @@
 'use strict';
-
 movieControllers.controller('ActorController',function ActorController($scope,$routeParams,$route,movieData){
 	$scope.sortOrder = '-release_date';
 	$scope.getActorDetails = function(){
@@ -14,7 +13,6 @@ movieControllers.controller('ActorController',function ActorController($scope,$r
 					console.log(response)
 				}
 			);
-
 			movieData.getMoviesByPerson($routeParams.actorId).$promise.then(
 				function(response){ 
 					console.log(response.cast);
