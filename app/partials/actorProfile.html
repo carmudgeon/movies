@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>{{person.name}}</h1>
+	<hr />
+	<div class="row">
+		<div class="col-xs-6 col-md-5">
+			<div class="well well-sm">							
+				<img ng-hide="person.profile_path == null" ng-src="http://image.tmdb.org/t/p/w500{{person.profile_path}}" alt="{{person.name}}" class="img-thumbnail"/>
+				<img ng-show="person.profile_path == null" ng-src="img/movieApp.png" alt="{{person.name}}" class="img-thumbnail"/>			
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-5">
+			<h2>{{person.name}} Movies</h2>
+			<div ng-repeat="movie in movies | orderBy : sortOrder">
+				<strong>{{movie.release_date}}</strong> {{movie.title}}
+			</div>
+		</div>
+	</div>
+</div>

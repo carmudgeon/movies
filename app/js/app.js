@@ -20,20 +20,11 @@ moviesApp.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'partials/search.html',
 		controller: 'MovieAppListController'
 	});
-	/*$routeProvider.when('/movies', 
-	{
-		templateUrl: 'partials/MoviesList.html',
-		controller: 'MovieListController'
-	});
-	$routeProvider.when('/movieDetails/:movieId',
-	{
-		templateUrl: 'partials/MovieDetails.html',
-		controller: 'MovieController'
-	});
 	$routeProvider.when('/actorProfile/:actorId',
 	{
 		templateUrl: 'partials/actorProfile.html',
 		controller: 'ActorController'
-	});*/
+	});
+	
 	$routeProvider.otherwise({redirectTo: '/search'});	
 }]);

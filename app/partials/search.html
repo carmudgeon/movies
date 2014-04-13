@@ -1,13 +1,21 @@
-<div class="container-fluid">
-	<h1>Search Movies</h1>
+<div class="container">
+	<h1>Search Actor Movies</h1>
 	<hr />
+	<div class="well">
+		<input class="form-control input-sm" ng-model="query" ng-change="searchActor()" value="" placeholder="Search Movies..."/>
+	</div>
 	<hr />
-	<ul class="list-unstyled">
-		<li ng-repeat="movie in movies">
-			<img ng-src="http://image.tmdb.org/t/p/w500{{movie.backdrop_path}}" alt="{{movie.original_title}}"/>
-			<div class="well">
-				{{movie.original_title}} - {{movie.release_date}}
+	<div class="row">
+		<div ng-repeat="person in people">
+			<div class="col-xs-6 col-md-5">
+				<div class="well well-sm">	
+					<a href="#/actorProfile/{{person.id}}" >				
+						<img ng-hide="person.profile_path == null" ng-src="http://image.tmdb.org/t/p/w500{{person.profile_path}}" alt="{{person.name}}" class="img-thumbnail"/>
+						<img ng-show="person.profile_path == null" ng-src="img/movieApp.png" alt="{{person.name}}" class="img-thumbnail"/>
+					</a>
+					<!--{{person}}-->					
+				</div>
 			</div>
-		</li>
-	</ul>
+		</div>
+	</div>
 </div>
